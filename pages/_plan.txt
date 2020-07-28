@@ -1,0 +1,166 @@
+import Head from "next/head";
+
+import Hero from "../components/hero/Media";
+
+import DetailsSection from "../components/sections/SideSide";
+
+import Newletter from "../components/Newsletter";
+
+import BlogSection from "../components/BlogSection";
+
+import Stats1 from "../components/stats/Brand";
+
+import Quote from "../components/testimonials/Quote";
+
+import DetailsSection2 from "../components/DetailsSection2";
+
+import SectionSplit from "../components/sections/Split";
+
+import DetailsSection3 from "../components/sections/TwoTwo";
+
+import DetailsSection31 from "../components/DetailsSection3";
+
+import Content from "../components/Content";
+
+import Faq from "../components/Faq";
+
+import ContentWithCard from "../components/ContentWithCard";
+
+export default function Home() {
+  return (
+    <div>
+      <Head>
+        <title>Create Next App</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
+      <main>
+        <Hero
+          overTitle="Capitulo 2"
+          titleBlack="Aceleradora Nacional"
+          titleColor="PymesHD"
+          image="https://images.unsplash.com/photo-1556740758-90de374c12ad?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+          video=""
+          text="Su misión es acelerar la transforamacion de empresas tradicionales en híbridos digital, con el fin que puedan acceder a la tecnologia comercial existente para optimizar sus utilidades y accesar mayoreos mercadeos."
+        />
+        <DetailsSection
+          title="dsdsds"
+          text="dsdsds dsd s ss ds dsd sdsds"
+          summaryTitle="dsdsddsds"
+          summaryText="dsds ds ds dsds ds ds sds dsd sd sdsdsdsddds"
+          bullets={[
+            {
+              title: "dsd dsd sd sdssdsd",
+              text: `Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Maiores impedit perferendis suscipit eaque, iste dolor
+              cupiditate blanditiis ratione.`,
+              icon: "1",
+            },
+            {
+              title: "dsd dsd sd sdssdsd",
+              text: "ds dsds dsd sds ds dsds dsd sdsddsdsd",
+              icon: "1",
+            },
+            {
+              title: "dsd dsd sd sdssdsd",
+              text: "ds dsds dsd sds ds dsds dsd sdsddsdsd",
+              icon: "1",
+            },
+          ]}
+          side="right"
+          image="https://tailwindui.com/img/features/feature-example-1.png"
+        />
+
+        <DetailsSection
+          summaryTitle="dsdsddsds"
+          summaryText="dsds ds ds dsds ds ds sds dsd sd sdsdsdsddds"
+          bullets={[
+            {
+              title: "dsd dsd sd sdssdsd",
+              text: `Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Maiores impedit perferendis suscipit eaque, iste dolor
+              cupiditate blanditiis ratione.`,
+              icon: "1",
+            },
+            {
+              title: "dsd dsd sd sdssdsd",
+              text: "ds dsds dsd sds ds dsds dsd sdsddsdsd",
+              icon: "1",
+            },
+            {
+              title: "dsd dsd sd sdssdsd",
+              text: "ds dsds dsd sds ds dsds dsd sdsddsdsd",
+              icon: "1",
+            },
+          ]}
+          side="left"
+          image="https://tailwindui.com/img/features/feature-example-1.png"
+        />
+
+        <Stats1
+          title="Trusted by developers from over 80 planets"
+          text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus repellat laudantium."
+          bullets={[
+            { title: "dsdsd", text: "100%" },
+            { title: "dsdsd", text: "100%" },
+          ]}
+        />
+
+        <Quote
+          title="La comunicación digital es un salvavidas para las empresas"
+          text="COVID-19 DIGITAL ENGAGMENT REPORT"
+          source="Twilio - 2020"
+        />
+        <SectionSplit
+          bullets={[
+            {
+              title: "Estabamos bien...",
+              text: `Abriendo puntos de venta, publicando paginas con productos, y
+por alla estaba el e-commerce`,
+            },
+            {
+              title:
+                "Ahora estamos acelerando en nuevas maneras de hacer negocios",
+              text: ` Las fronteras del comercio se desvancen creando una experiencia
+              multi-canal. Por eso el COVID ha sido un catalizador para la
+              innovacion.`,
+            },
+          ]}
+          image="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80"
+        />
+
+        <DetailsSection3
+          title="El comercio como una experiencia multicanal"
+          bullets={[
+            {
+              title: "Comercio Electronico",
+              text:
+                "Mas alla que un catalogo web donde se pone una tarjeta de credito, el comercio electronico es una manera mas eficiente, placentera y mejorada de comprar.",
+              icon: "",
+            },
+            {
+              title: "Redes Sociales",
+              text:
+                "La difusión de productos, servicios, marcas y personas. Instantanea, Teledirigida y por $0,02 el click, integrada con recomendaciones e influncers",
+              icon: "",
+            },
+            {
+              title: "Whatsapp, SMS, VOIP y Bots",
+              text:
+                "La comunicación masiva en doble via, con servicio personal 1-1, sin espera y sin costo. Pasando de e-mail, a voz y a chat durante una misma conversacion sin perder contexto.",
+              icon: "",
+            },
+            {
+              title: "Marketing Automatizado",
+              text:
+                "Acciones automatizadas de seguimiento, recordatorios, descuentos inteligentes, retargeting, conversiones y todo un ejercito de marketing en un app de $9,99 por mes.",
+              icon: "",
+            },
+          ]}
+        />
+
+        <Content title="ddssdsdsd" preTitle="dsdsd sds ds dsd" />
+      </main>
+    </div>
+  );
+}
