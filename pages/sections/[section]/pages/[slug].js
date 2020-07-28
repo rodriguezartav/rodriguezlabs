@@ -6,7 +6,13 @@ import Wrapper from "components/Wrapper";
 
 import Blog from "components/blog/ThreeCard";
 
-import { MENU, SECTIONS, PAGE, STATIC_PAGES, query } from "data/Contentful";
+import {
+  MENU,
+  SECTIONS,
+  PAGE,
+  STATIC_PAGES,
+  query,
+} from "../../../../data/Contentful";
 //
 //
 export async function getStaticPaths() {
