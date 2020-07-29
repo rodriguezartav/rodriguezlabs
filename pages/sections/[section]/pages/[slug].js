@@ -60,7 +60,8 @@ export default function Home(props) {
   return (
     <div>
       <Head>
-        <title>Create Next App</title>
+        <title>rodriguezLabs.co</title>
+
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <LeftNav menu={props.menu} />
