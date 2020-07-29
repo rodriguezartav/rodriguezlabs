@@ -1,10 +1,17 @@
 import { query as api } from "./Api";
+var mixpanel = require("mixpanel-browser");
 
-export const load = (dispatch) => {
+export const load = (dispatch, iniState) => {
   if (window && window.localStorage && window.localStorage.getItem("store")) {
+    const state = JSON.parse(
+      window.localStorage.getItem("store") || JSON.stringify(iniState)
+    );
+
+    mixpanel.identify(state.visitor.uniqueId);
+
     dispatch({
       type: "LOAD",
-      payload: JSON.parse(window.localStorage.getItem("store") || "{}"),
+      payload: state,
     });
   }
   api("visitors/visitor_count", {}).then((response) => {

@@ -9,6 +9,7 @@ const initState = {
   visitors: { count: 0 },
   visitor: {
     name: "",
+    uniqueId: parseInt(Math.random() * 1000000),
     id: null,
     pages: [],
   },
@@ -25,7 +26,7 @@ export const Provider = ({ children }) => {
 
   React.useEffect(() => {
     try {
-      load(dispatch);
+      load(dispatch, initState);
     } catch (e) {}
   }, []);
 

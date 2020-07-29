@@ -6,8 +6,6 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <title>rodriguezLabs.co</title>
-
           <link rel="icon" href="/favicon.ico" />
           <link rel="stylesheet" href="https://rsms.me/inter/inter.css"></link>
         </Head>

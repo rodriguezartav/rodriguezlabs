@@ -7,7 +7,7 @@ import Wrapper from "../../components/Wrapper";
 import Link from "next/link";
 
 import Blog from "../../components/blog/ThreeCard";
-
+import Layout from "../../views/Layout";
 import { MENU, STATIC_PAGES, SECTION, query } from "../../data/Contentful";
 
 export async function getStaticPaths() {
@@ -46,12 +46,7 @@ export default function Home(props) {
 
   console.log(props);
   return (
-    <div>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
+    <Layout>
       <LeftNav menu={props.menu} />
 
       {props.section.componentsCollection.items.map((item) => {
@@ -92,6 +87,6 @@ export default function Home(props) {
         items={props.section.pagesCollection.items}
       />
 */}
-    </div>
+    </Layout>
   );
 }

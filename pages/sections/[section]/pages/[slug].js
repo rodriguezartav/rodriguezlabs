@@ -5,6 +5,7 @@ import LeftNav from "components/nav/Left";
 import Wrapper from "components/Wrapper";
 
 import Blog from "components/blog/ThreeCard";
+import Layout from "views/Layout";
 
 import {
   MENU,
@@ -58,12 +59,7 @@ export default function Home(props) {
   const router = useRouter();
 
   return (
-    <div>
-      <Head>
-        <title>rodriguezLabs.co</title>
-
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <Layout>
       <LeftNav menu={props.menu} />
       {props.page.componentsCollection.items.map((item) => {
         return <Wrapper item={item} />;
@@ -104,6 +100,6 @@ export default function Home(props) {
         }
       />
 */}
-    </div>
+    </Layout>
   );
 }

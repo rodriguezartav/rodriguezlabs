@@ -2,8 +2,8 @@ import React from "react";
 
 export default function col3(props) {
   return (
-    <div class="py-12 bg-white">
-      <div class="max-w-xl mx-auto px-4 sm:px-6 lg:max-w-screen-xl lg:px-8">
+    <div className="py-12 bg-white">
+      <div className="max-w-xl mx-auto px-4 sm:px-6 lg:max-w-screen-xl lg:px-8">
         <div className="lg:text-center mb-12">
           <h3 className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
             {props.title}
@@ -13,13 +13,13 @@ export default function col3(props) {
           </p>
         </div>
 
-        <div class="lg:grid lg:grid-cols-3 lg:gap-8">
+        <div className="lg:grid lg:grid-cols-3 lg:gap-8">
           {props.bullets.map((item) => {
             return (
               <div>
-                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-red-500 text-white">
+                <div className="flex items-center justify-center h-12 w-12 rounded-md bg-red-500 text-white">
                   <svg
-                    class="h-6 w-6"
+                    className="h-6 w-6"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -32,11 +32,11 @@ export default function col3(props) {
                     />
                   </svg>
                 </div>
-                <div class="mt-5">
-                  <h5 class="text-lg leading-6 font-medium text-gray-900">
+                <div className="mt-5">
+                  <h5 className="text-lg leading-6 font-medium text-gray-900">
                     {item.title}
                   </h5>
-                  <p class="mt-2 text-base leading-6 text-gray-500">
+                  <p className="mt-2 text-base leading-6 text-gray-500">
                     {item.text}
                   </p>
                 </div>

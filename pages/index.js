@@ -8,7 +8,7 @@ import LeftNav from "../components/nav/Left";
 import Blog from "../components/grid/Cards";
 
 import Link from "next/link";
-
+import Layout from "../views/Layout";
 import { Register } from "../apps/Map";
 
 import { MENU, PAGE, STATIC_PAGES, query } from "../data/Contentful";
@@ -37,13 +37,7 @@ export default function Home(props) {
   const [showRegister, setShowRegister] = React.useState(false);
 
   return (
-    <div>
-      <Head>
-        <title>rodriguezLabs.co</title>
-
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
+    <Layout>
       <LeftNav menu={props.menu} />
 
       {props.page.componentsCollection.items.map((item) => {
@@ -102,6 +96,6 @@ export default function Home(props) {
           }}
         />
       </div>
-    </div>
+    </Layout>
   );
 }
