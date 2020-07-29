@@ -85,14 +85,14 @@ export default function Home(props) {
                 <div className="border-t border-gray-200">
                   <div className="-mt-px flex">
                     <div className="w-0 flex-1 flex border-r  bg-red-600 border-gray-200">
-                      <a
-                        onClick={() => {
-                          setShowRegister(item.slug);
-                        }}
-                        className="relative -mr-px w-0 flex-1 inline-flex items-center justify-center py-4 text-sm leading-5 text-white font-medium border border-transparent rounded-bl-lg hover:text-gray-50 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 focus:z-10 transition ease-in-out duration-150"
+                      <Link
+                        href="/sections/[section]"
+                        as={`/sections/${item.slug}`}
                       >
-                        <span className="ml-3">Solicitar Acceso</span>
-                      </a>
+                        <a className="relative -mr-px w-0 flex-1 inline-flex items-center justify-center py-4 text-sm leading-5 text-white font-medium border border-transparent rounded-bl-lg hover:text-gray-50 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 focus:z-10 transition ease-in-out duration-150">
+                          <span className="ml-3">Ingresar</span>
+                        </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -101,13 +101,6 @@ export default function Home(props) {
           }}
         />
       </div>
-
-      {showRegister && (
-        <Register
-          onClose={() => setShowRegister(false)}
-          redirect={[`/sections/[section]`, `/sections/${showRegister}`]}
-        />
-      )}
     </div>
   );
 }
