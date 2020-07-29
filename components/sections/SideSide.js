@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 export default function SideSide(props) {
   const renderBullets = () => {
     return (
-      <ul className="mt-10">
+      <ul className="mt-0">
         {props.side == "left" ? renderMainBullet() : null}
         {props.bullets.map((item) => {
           return (
@@ -45,8 +45,9 @@ export default function SideSide(props) {
   };
 
   const renderMainBullet = () => {
+    if (!props.mainBullet) return null;
     return (
-      <li className="mt-10">
+      <li className="mt-8">
         <div className="flex">
           <div className="flex-shrink-0"></div>
           <div className="ml-0">
@@ -78,7 +79,7 @@ export default function SideSide(props) {
 
   const renderImage = () => {
     return (
-      <div className="mt-10 -mx-4 relative lg:mt-0">
+      <div className="mt-0 -mx-4 relative lg:mt-0">
         <svg
           className="absolute left-1/2 transform -translate-x-1/2 translate-y-16 lg:hidden"
           width={784}
@@ -182,14 +183,13 @@ export default function SideSide(props) {
     );
   };
 
-  debugger;
   return (
-    <div className="py-16 bg-gray-50 overflow-hidden lg:py-10">
+    <div className="pb-20 bg-gray-50 overflow-hidden  lg:pt-20">
       <div className="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-screen-xl">
         {renderDotsSvg()}
         {renderMainTitle()}
 
-        <div className="relative mt-12 lg:mt-24 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center">
+        <div className="relative mt-16 lg:mt-16 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center">
           {props.side == "left" ? renderTitleAndBullets() : renderImage()}
           {props.side == "left" ? renderImage() : renderTitleAndBullets()}
         </div>

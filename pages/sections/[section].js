@@ -4,6 +4,8 @@ import { useRouter } from "next/router";
 import LeftNav from "../../components/nav/Left";
 import Wrapper from "../../components/Wrapper";
 
+import Link from "next/link";
+
 import Blog from "../../components/blog/ThreeCard";
 
 import { MENU, STATIC_PAGES, SECTION, query } from "../../data/Contentful";
@@ -56,6 +58,26 @@ export default function Home(props) {
         return <Wrapper item={item} />;
       })}
 
+      {props.section.pagesCollection.items &&
+        props.section.pagesCollection.items.length > 0 && (
+          <div className="my-20 mx-auto w-48 ">
+            <span className="inline-flex rounded-md shadow-sm">
+              <Link
+                href="/sections/[section]/pages/[slug]"
+                as={`/sections/${props.section.slug}/pages/${props.section.pagesCollection.items[0].slug}`}
+              >
+                <button
+                  type="button"
+                  className="inline-flex  items-center px-6 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-red-600 hover:bg-red-500 focus:outline-none focus:border-red-700 focus:shadow-outline-red active:bg-red-700 transition ease-in-out duration-150"
+                >
+                  Primer Capítulo
+                </button>
+              </Link>
+            </span>
+          </div>
+        )}
+
+      {/*
       <Blog
         onClick={(item) => {
           return () => {
@@ -69,6 +91,7 @@ export default function Home(props) {
         text=""
         items={props.section.pagesCollection.items}
       />
+*/}
     </div>
   );
 }

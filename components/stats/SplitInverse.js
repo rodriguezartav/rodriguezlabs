@@ -3,13 +3,8 @@ import React from "react";
 export default function Split(props) {
   return (
     <div className="relative bg-white">
-      <div className="h-56 bg-red-600 sm:h-72 lg:absolute lg:left-0 lg:h-full lg:w-1/2">
-        {props.image && (
-          <img className="w-full h-full object-cover" src={props.image} />
-        )}
-      </div>
-      <div className="relative max-w-screen-xl mx-auto px-4 py-8 sm:py-12 sm:px-6 lg:py-16">
-        <div className="max-w-2xl mx-auto lg:max-w-none lg:mr-0 lg:ml-auto lg:w-1/2 lg:pl-10">
+      <div className="relative max-w-screen-xl  px-4 py-8 sm:py-12 sm:px-6 lg:py-16">
+        <div className="max-w-2xl  lg:max-w-none lg:ml-0 lg:mr-auto lg:w-1/2 lg:pl-10">
           <div>
             <div className="flex items-center justify-center h-12 w-12 rounded-md bg-red-500 text-white">
               <svg
@@ -48,6 +43,11 @@ export default function Split(props) {
             </dl>
           </div>
         </div>
+      </div>
+      <div className="h-56 bg-red-600 sm:h-72 lg:absolute lg:right-0 lg:top-0 lg:h-full lg:w-1/2">
+        {props.image && (
+          <img className="w-full h-full object-cover" src={props.image} />
+        )}
       </div>
     </div>
   );

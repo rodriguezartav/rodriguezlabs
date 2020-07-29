@@ -3,11 +3,22 @@ import { useRouter } from "next/router";
 
 import { Media, Angle, Form, Screenshot, Split } from "./hero";
 
-import { SideSide, Col3, Split as SectionSplit, TwoTwo } from "./sections";
+import {
+  SideSide,
+  Col3,
+  Split as SectionSplit,
+  TwoTwo,
+  Center22,
+} from "./sections";
 
 import { Quote, Large, Center as TestimonialCenter } from "./testimonials";
 
-import { Brand } from "./stats";
+import {
+  Brand,
+  Card as CardTestimonial,
+  Split as SplitTestimonial,
+  SplitInverse,
+} from "./stats";
 
 import Content from "./Content";
 //
@@ -31,14 +42,19 @@ const map = {
     TwoTwo: TwoTwo,
     Col3: Col3,
     Split: SectionSplit,
+    Center22: Center22,
   },
   Pagetestimonial: {
     Quote: Quote,
     Large: Large,
     Center: TestimonialCenter,
+    SideSide: SideSide,
   },
   Pagestat: {
-    Brand: Brand,
+    Brand,
+    Split: SplitTestimonial,
+    Card: CardTestimonial,
+    SplitInverse,
   },
   Pagecontent: {
     Content: Content,

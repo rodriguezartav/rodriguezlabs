@@ -13,6 +13,8 @@ import {
   STATIC_PAGES,
   query,
 } from "../../../../data/Contentful";
+
+import Link from "next/link";
 //
 //
 export async function getStaticPaths() {
@@ -61,13 +63,29 @@ export default function Home(props) {
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <LeftNav menu={props.menu} />
-
       {props.page.componentsCollection.items.map((item) => {
         return <Wrapper item={item} />;
       })}
 
+      {props.page.nextPage && (
+        <div className="my-20 mx-auto w-48 ">
+          <span className="inline-flex rounded-md shadow-sm">
+            <Link
+              href="/sections/[section]/pages/[slug]"
+              as={`/sections/${props.page.linkedFrom.sectionCollection.items[0].slug}/pages/${props.page.nextPage.slug}`}
+            >
+              <button
+                type="button"
+                className="inline-flex  items-center px-6 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-red-600 hover:bg-red-500 focus:outline-none focus:border-red-700 focus:shadow-outline-red active:bg-red-700 transition ease-in-out duration-150"
+              >
+                Siguiente Capitulo
+              </button>
+            </Link>
+          </span>
+        </div>
+      )}
+      {/*
       <Blog
         onClick={(item) => {
           const section = props.page.linkedFrom.sectionCollection.items[0].slug;
@@ -84,6 +102,7 @@ export default function Home(props) {
           props.page.linkedFrom.sectionCollection.items[0].pagesCollection.items
         }
       />
+*/}
     </div>
   );
 }

@@ -1,16 +1,15 @@
 import React from "react";
 
-export default function Card() {
+export default function Card(props) {
   return (
     <div className="bg-gray-50 pt-12 sm:pt-16">
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl leading-9 font-extrabold text-gray-900 sm:text-4xl sm:leading-10">
-            Trusted by developers from over 80 planets
+            {props.title}
           </h2>
           <p className="mt-3 text-xl leading-7 text-gray-500 sm:mt-4">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Repellendus repellat laudantium.
+            {props.text}
           </p>
         </div>
       </div>

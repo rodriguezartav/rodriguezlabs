@@ -38,6 +38,7 @@ export const STATIC_PAGES = /* GraphQL */ `
       items {
         title
         slug
+        text
         pagesCollection(limit: 50) {
           items {
             title
@@ -54,7 +55,7 @@ export const SECTIONS = /* GraphQL */ `
     items {
       title
       slug
-
+      text
       componentsCollection(limit: 10) {
         ... on SectionComponentsCollection {
           items {
@@ -129,7 +130,7 @@ export const SECTION = /* GraphQL */ `
       items {
         title
         slug
-
+        text
         componentsCollection(limit: 10) {
           ... on SectionComponentsCollection {
             items {
@@ -204,7 +205,9 @@ export const PAGE = /* GraphQL */ `
     pageCollection(limit: 1, where: { slug: $slug }) {
       items {
         title
-
+        nextPage {
+          slug
+        }
         linkedFrom {
           sectionCollection(limit: 1) {
             items {
