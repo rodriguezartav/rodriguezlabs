@@ -6,21 +6,13 @@ import Link from "next/link";
 export default function Left(props) {
   const [entry, setEntry] = useState();
 
-  //const menu = menuentryCollection.items;
-
-  //menuCategoriesCollection;
-
-  //menuLinksCollection;
-
-  //sys;
-
-  //menu.menuentryCollection.items[0].menuCategoriesCollection.items[1]
-  // .menuLinksCollection.items[0].page.sys.id;
-
   const renderEntry = (currentEntry) => {
     return (
       <button
-        onClick={() => {
+        key={currentEntry.title}
+        onClick={(e) => {
+          e.preventDefault;
+          e.stopPropagation();
           setEntry(entry ? null : currentEntry);
         }}
         type="button"
@@ -57,14 +49,14 @@ export default function Left(props) {
           <nav className="grid row-gap-10 px-4 py-8 bg-white sm:grid-cols-2 sm:col-gap-8 sm:py-12 sm:px-6 lg:px-8 xl:pr-12">
             {entry.menuCategoriesCollection.items.map((category) => {
               return (
-                <div className="space-y-5">
+                <div key={category.title} className="space-y-5">
                   <h3 className="text-sm leading-5 font-medium tracking-wide text-gray-500 uppercase">
                     {category.title}
                   </h3>
                   <ul className="space-y-6">
-                    {category.menuLinksCollection.items.map((link) => {
+                    {category.menuLinksCollection.items.map((link, index) => {
                       return (
-                        <li className="flow-root">
+                        <li key={index} className="flow-root">
                           <a
                             href="#"
                             className="-m-3 p-3 flex items-center space-x-4 rounded-md text-base leading-6 font-medium text-gray-900 hover:bg-gray-50 transition ease-in-out duration-150"
@@ -111,41 +103,36 @@ export default function Left(props) {
           <div className="space-y-6 bg-gray-50 px-4 py-8 sm:py-12 sm:px-6 lg:px-8 xl:pl-12">
             <div className="space-y-6">
               <h3 className="text-sm leading-5 font-medium tracking-wide text-gray-500 uppercase">
-                From the blog
+                Artículos del Blog
               </h3>
               <ul className="space-y-6">
-                <li className="flow-root">
-                  <a
-                    href="#"
-                    className="-m-3 p-3 flex rounded-lg hover:bg-gray-100 transition ease-in-out duration-150 sm:space-x-8"
-                  >
-                    <div className="hidden sm:block flex-shrink-0">
-                      <img
-                        className="w-32 h-20 object-cover rounded-md"
-                        src="https://images.unsplash.com/photo-1558478551-1a378f63328e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2849&q=80"
-                        alt
-                      />
-                    </div>
-                    <div className="space-y-1 min-w-0 flex-1">
-                      <h4 className="text-base leading-6 font-medium text-gray-900 truncate">
-                        Boost your conversion rate
-                      </h4>
-                      <p className="text-sm leading-5 text-gray-500">
-                        Eget ullamcorper ac ut vulputate fames nec mattis
-                        pellentesque elementum. Viverra tempor id mus.
-                      </p>
-                    </div>
-                  </a>
-                </li>
+                {props.posts.map((item) => {
+                  return (
+                    <li className="flow-root">
+                      <Link href="/blog/[slug]" as={`/blog/${item.slug}`}>
+                        <a className="-m-3 p-3 flex rounded-lg hover:bg-gray-100 transition ease-in-out duration-150 sm:space-x-8">
+                          <div className="hidden sm:block flex-shrink-0"></div>
+                          <div className="space-y-1 min-w-0 flex-1">
+                            <h4 className="text-base leading-6 font-medium text-gray-900 truncate">
+                              {item.title}
+                            </h4>
+                            <p className="text-sm leading-5 text-gray-500">
+                              {item.text}
+                            </p>
+                          </div>
+                        </a>
+                      </Link>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
             <div className="text-sm leading-5 font-medium">
-              <a
-                href="#"
-                className="text-red-600 hover:text-red-500 transition ease-in-out duration-150"
-              >
-                View all posts →
-              </a>
+              <Link href="/blog">
+                <a className="text-red-600 hover:text-red-500 transition ease-in-out duration-150">
+                  View all posts →
+                </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -154,7 +141,12 @@ export default function Left(props) {
   };
 
   return (
-    <div className="z-20 relative">
+    <div
+      onClick={() => {
+        setEntry();
+      }}
+      className="z-20 relative"
+    >
       <div className="relative z-10 bg-white shadow">
         <div
           className={`text-gray-${

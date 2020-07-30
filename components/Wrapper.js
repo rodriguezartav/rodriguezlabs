@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
 
-import { Media, Angle, Form, Screenshot, Split } from "./hero";
+import { Media, Angle, Form, Screenshot, Split, Center } from "./hero";
 
 import {
   SideSide,
@@ -36,6 +36,7 @@ const map = {
     Form: Form,
     Screenshot: Screenshot,
     Split: Split,
+    Center: Center,
   },
   Pagesection: {
     SideSide: SideSide,
@@ -57,7 +58,7 @@ const map = {
     SplitInverse,
   },
   Pagecontent: {
-    Content: Content,
+    Normal: Content,
   },
 };
 

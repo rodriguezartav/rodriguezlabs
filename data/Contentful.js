@@ -1,9 +1,17 @@
 const ACCESS_TOKEN = "ox0co3KbPh1YWbwWUi2DZm39VemmntNnj4oqBV00ZU0";
 const SPACE = "0txkpt2nv3no";
 
-import { MENU, SECTIONS, PAGE, SECTION, STATIC_PAGES } from "./Queries";
+import {
+  MENU,
+  SECTIONS,
+  PAGE,
+  SECTION,
+  STATIC_PAGES,
+  POST,
+  POSTS,
+} from "./Queries";
 
-export { MENU, SECTIONS, PAGE, SECTION, STATIC_PAGES };
+export { MENU, SECTIONS, PAGE, SECTION, STATIC_PAGES, POST, POSTS };
 
 export async function query(query, { variables, preview }) {
   // Call an external API endpoint to get posts

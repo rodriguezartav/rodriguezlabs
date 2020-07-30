@@ -45,12 +45,20 @@ export default function Angle(props) {
           </main>
         </div>
       </div>
-      <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-        <img
-          className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
-          src={props.image}
-          alt
-        />
+      <div className="lg:absolute bg-red-600 lg:inset-y-0 lg:right-0 lg:w-1/2">
+        {props.image && (
+          <img
+            className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
+            src={props.image}
+            alt
+          />
+        )}
+        {!props.image && (
+          <img
+            className="w-3/4 ml-20 pl-28 h-full object-fill"
+            src="/logo3.svg"
+          />
+        )}
       </div>
     </div>
   );

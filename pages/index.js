@@ -19,11 +19,13 @@ export async function getStaticProps({ params }) {
   });
 
   let sectionsResponse = await query(STATIC_PAGES, {});
+  let postsResponse = await query(POSTS, {});
 
   let menuResponse = await query(MENU, {});
 
   return {
     props: {
+      posts: postsResponse.postCollection.items,
       sections: sectionsResponse.sectionCollection.items,
       page: pageResponse.pageCollection.items[0],
       menu: menuResponse.menuentryCollection,
@@ -38,7 +40,7 @@ export default function Home(props) {
 
   return (
     <Layout>
-      <LeftNav menu={props.menu} />
+      <LeftNav posts={props.posts} menu={props.menu} />
 
       {props.page.componentsCollection.items.map((item) => {
         return <Wrapper item={item} />;

@@ -2,125 +2,43 @@ import React from "react";
 
 //
 //
-export default function center() {
+export default function center(props) {
   return (
-    <section classname="bg-white overflow-hidden">
-      <div classname="relative max-w-screen-xl mx-auto pt-20 pb-12 px-4 sm:px-6 lg:px-8 lg:py-20">
-        <svg
-          classname="absolute top-full left-0 transform translate-x-80 -translate-y-24 lg:hidden"
-          width="{784}"
-          height="{404}"
-          fill="none"
-          viewBox="0 0 784 404"
-        >
-          <defs>
-            <pattern
-              id="e56e3f81-d9c1-4b83-a3ba-0d0ac8c32f32"
-              x="{0}"
-              y="{0}"
-              width="{20}"
-              height="{20}"
-              patternUnits="userSpaceOnUse"
-            >
-              <rect
-                x="{0}"
-                y="{0}"
-                width="{4}"
-                height="{4}"
-                classname="text-gray-200"
-                fill="currentColor"
-              />
-            </pattern>
-          </defs>
-          <rect
-            width="{784}"
-            height="{404}"
-            fill="url(#e56e3f81-d9c1-4b83-a3ba-0d0ac8c32f32)"
-          />
-        </svg>
-        <svg
-          classname="hidden lg:block absolute right-full top-1/2 transform translate-x-1/2 -translate-y-1/2"
-          width="{404}"
-          height="{784}"
-          fill="none"
-          viewBox="0 0 404 784"
-        >
-          <defs>
-            <pattern
-              id="56409614-3d62-4985-9a10-7ca758a8f4f0"
-              x="{0}"
-              y="{0}"
-              width="{20}"
-              height="{20}"
-              patternUnits="userSpaceOnUse"
-            >
-              <rect
-                x="{0}"
-                y="{0}"
-                width="{4}"
-                height="{4}"
-                classname="text-gray-200"
-                fill="currentColor"
-              />
-            </pattern>
-          </defs>
-          <rect
-            width="{404}"
-            height="{784}"
-            fill="url(#56409614-3d62-4985-9a10-7ca758a8f4f0)"
-          />
-        </svg>
-        <div classname="relative lg:flex lg:items-center">
-          <div classname="hidden lg:block lg:flex-shrink-0">
-            <img
-              classname="h-64 w-64 rounded-full xl:h-80 xl:w-80"
-              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-              alt
-            />
-          </div>
-          <div classname="relative lg:ml-10">
-            <svg
-              classname="absolute top-0 left-0 transform -translate-x-8 -translate-y-24 h-36 w-36 text-red-200 opacity-50"
-              stroke="currentColor"
-              fill="none"
-              viewBox="0 0 144 144"
-            >
-              <path
-                strokewidth="{2}"
-                d="M41.485 15C17.753 31.753 1 59.208 1 89.455c0 24.664 14.891 39.09 32.109 39.09 16.287 0 28.386-13.03 28.386-28.387 0-15.356-10.703-26.524-24.663-26.524-2.792 0-6.515.465-7.446.93 2.327-15.821 17.218-34.435 32.11-43.742L41.485 15zm80.04 0c-23.268 16.753-40.02 44.208-40.02 74.455 0 24.664 14.891 39.09 32.109 39.09 15.822 0 28.386-13.03 28.386-28.387 0-15.356-11.168-26.524-25.129-26.524-2.792 0-6.049.465-6.98.93 2.327-15.821 16.753-34.435 31.644-43.742L121.525 15z"
-              />
-            </svg>
-            <blockquote classname="relative">
-              <div classname="text-2xl leading-9 font-medium text-gray-900">
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
-                  expedita voluptas culpa sapiente alias molestiae. Numquam
-                  corrupti in laborum sed rerum et corporis.
-                </p>
+    <div className="relative bg-gray-50 overflow-hidden">
+      <div className="hidden sm:block sm:absolute sm:inset-y-0 sm:h-full sm:w-full">
+        <main className="mt-10 mx-auto max-w-screen-xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 xl:mt-28">
+          <div className="text-center">
+            <h2 className="text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-5xl sm:leading-none md:text-6xl">
+              Data to enrich your
+              <br className="xl:hidden" />
+              <span className="text-indigo-600">online business</span>
+            </h2>
+            <p className="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
+              Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
+              lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
+              fugiat aliqua.
+            </p>
+            <div className="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
+              <div className="rounded-md shadow">
+                <a
+                  href="#"
+                  className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10"
+                >
+                  Get started
+                </a>
               </div>
-              <footer classname="mt-8">
-                <div classname="flex">
-                  <div classname="flex-shrink-0 lg:hidden">
-                    <img
-                      classname="h-12 w-12 rounded-full"
-                      src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                      alt
-                    />
-                  </div>
-                  <div classname="ml-4 lg:ml-0">
-                    <div classname="text-base leading-6 font-medium text-gray-900">
-                      Judith Black
-                    </div>
-                    <div classname="text-base leading-6 font-medium text-red-600">
-                      CEO, Tuple
-                    </div>
-                  </div>
-                </div>
-              </footer>
-            </blockquote>
+              <div className="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
+                <a
+                  href="#"
+                  className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-indigo-600 bg-white hover:text-indigo-500 focus:outline-none focus:border-indigo-300 focus:shadow-outline-indigo transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10"
+                >
+                  Live demo
+                </a>
+              </div>
+            </div>
           </div>
-        </div>
+        </main>
       </div>
-    </section>
+    </div>
   );
 }

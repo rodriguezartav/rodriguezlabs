@@ -1,5 +1,5 @@
 import { query as api } from "./Api";
-var mixpanel = require("mixpanel-browser");
+//var mixpanel = require("mixpanel-browser");
 
 export const load = (dispatch, iniState) => {
   if (window && window.localStorage && window.localStorage.getItem("store")) {
@@ -7,7 +7,7 @@ export const load = (dispatch, iniState) => {
       window.localStorage.getItem("store") || JSON.stringify(iniState)
     );
 
-    mixpanel.identify(state.visitor.uniqueId);
+    //mixpanel.identify(state.visitor.uniqueId);
 
     dispatch({
       type: "LOAD",

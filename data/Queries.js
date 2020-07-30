@@ -200,6 +200,98 @@ export const SECTION = /* GraphQL */ `
   }
 `;
 
+export const POSTS = /* GraphQL */ `
+  query {
+    postCollection(limit: 20) {
+      items {
+        title
+        slug
+        text
+        tags
+        preTitle
+        image {
+          url
+        }
+      }
+    }
+  }
+`;
+
+export const POST = /* GraphQL */ `
+  query($slug: String!) {
+    postCollection(limit: 1, where: { slug: $slug }) {
+      items {
+        title
+        slug
+        text
+        tags
+        preTitle
+        image {
+          url
+        }
+        componentsCollection(limit: 10) {
+          ... on PostComponentsCollection {
+            items {
+              __typename
+
+              ... on Pagesection {
+                title
+                text
+                props
+                image {
+                  url
+                }
+                mainBullet {
+                  ... on Bullet {
+                    title
+                    text
+                    icon {
+                      url
+                    }
+                  }
+                }
+                type
+                bulletsCollection(limit: 4) {
+                  items {
+                    ... on Bullet {
+                      title
+                      text
+                      icon {
+                        url
+                      }
+                    }
+                  }
+                }
+              }
+
+              ... on Pagecontent {
+                title
+                type
+                content {
+                  json
+                }
+              }
+              ... on Pagehero {
+                overTitle
+                text
+                titleBlack
+                titleColor
+                type
+                video {
+                  url
+                }
+                image {
+                  url
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`;
+
 export const PAGE = /* GraphQL */ `
   query($slug: String!) {
     pageCollection(limit: 1, where: { slug: $slug }) {

@@ -4,5 +4,6 @@ import Form from "./Form";
 import Angle from "./Angle";
 import Screenshot from "./Screenshot";
 import Split from "./Split";
+import Center from "./Center";
 
-export { Form, Media, Angle, Screenshot, Split };
+export { Form, Media, Angle, Screenshot, Split, Center };
