@@ -92,7 +92,7 @@ export const SECTIONS = /* GraphQL */ `
 
             ... on Pagecontent {
               title
-              text
+              type
               content {
                 json
               }
@@ -167,7 +167,7 @@ export const SECTION = /* GraphQL */ `
 
               ... on Pagecontent {
                 title
-                text
+                type
                 content {
                   json
                 }

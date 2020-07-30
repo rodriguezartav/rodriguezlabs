@@ -43,7 +43,6 @@ export async function getStaticProps({ params }) {
   return {
     props: {
       posts: postsResponse.postCollection.items,
-
       section: sectionResponse.sectionCollection.items[0],
       menu: menuResponse.menuentryCollection,
     },
