@@ -16,7 +16,7 @@ export default function col3(props) {
         <div className="lg:grid lg:grid-cols-3 lg:gap-8">
           {props.bullets.map((item) => {
             return (
-              <div>
+              <div className="sm:mb-5">
                 <div className="flex items-center justify-center h-12 w-12 rounded-md bg-red-500 text-white">
                   <svg
                     className="h-6 w-6"
