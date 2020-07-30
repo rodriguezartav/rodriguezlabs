@@ -8,7 +8,7 @@ export default function MyApp(props) {
   return (
     <React.Fragment>
       <Head>
-        <title>rodriguezLabs.co</title>
+        <title>rodriguezLab.co</title>
 
         <link rel="icon" href="/favicon.ico" />
         <meta

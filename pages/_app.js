@@ -9,16 +9,17 @@ import Alerts from "../components/alert/Alerts";
 
 import "../styles/index.css";
 import Router from "next/router";
-var mixpanel = require("mixpanel-browser");
+
+import * as gtag from "../data/Gtag";
 
 export default function MyApp(props) {
   const { Component, pageProps } = props;
 
   useEffect(() => {
-    mixpanel.init("07b1c9b68a904562001e4fb13b1dcc18");
     const handleRouteChange = (url) => {
-      mixpanel.track("Page View", { url: url });
+      gtag.pageview(url);
     };
+
     Router.events.on("routeChangeComplete", handleRouteChange);
     return () => {
       Router.events.off("routeChangeComplete", handleRouteChange);

@@ -7,6 +7,9 @@ export default function Split(props) {
         {props.image && (
           <img className="w-full h-full object-cover" src={props.image} />
         )}
+        {!props.image && (
+          <img className="w-full p-12 h-full object-contain" src="/logo3.svg" />
+        )}
       </div>
       <div className="relative max-w-screen-xl mx-auto px-4 py-8 sm:py-12 sm:px-6 lg:py-16">
         <div className="max-w-2xl mx-auto lg:max-w-none lg:mr-0 lg:ml-auto lg:w-1/2 lg:pl-10">
