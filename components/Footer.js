@@ -18,13 +18,14 @@ export default function Footer() {
               </h4>
               <p className="text-gray-500">
                 RodriguezLabs es la consolidación de los diversos intereses del
-                inventor Roberto Rodriguez.
+                inventor Roberto Rodríguez en una misma organización.
               </p>
 
               <p className="mt-2 text-gray-500">
-                Trabajando desde los 19 años en gran variedad de industrias como
-                turismo, periodismo, comercio, educación y conservacion - a
-                veces con exito.
+                Trabajando desde los 19 años en gran variedad de equipos de
+                turismo, periodismo investigativo, storytelling, comercio
+                digital, import/export, educación y conservacion - a veces con
+                exito.
               </p>
 
               <p className="mt-2 text-gray-500">

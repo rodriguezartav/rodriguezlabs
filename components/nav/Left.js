@@ -95,6 +95,9 @@ export default function Left(props) {
                                   <a>{link.title}</a>
                                 </Link>
                               )}
+                              {!link.page && !link.section && (
+                                <a>{link.title} - pronto</a>
+                              )}
                             </span>
                           </a>
                         </li>
