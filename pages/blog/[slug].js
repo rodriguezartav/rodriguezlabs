@@ -6,7 +6,7 @@ import Wrapper from "components/Wrapper";
 
 import Layout from "views/Layout";
 
-import { MENU, POST, PAGE, STATIC_PAGES, POSTS, query } from "data/Contentful";
+import { MENU, POST, POSTS, query } from "data/Contentful";
 
 //
 //

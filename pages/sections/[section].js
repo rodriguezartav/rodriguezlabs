@@ -8,7 +8,13 @@ import Link from "next/link";
 
 import Blog from "../../components/blog/ThreeCard";
 import Layout from "../../views/Layout";
-import { MENU, STATIC_PAGES, SECTION, query } from "../../data/Contentful";
+import {
+  MENU,
+  STATIC_PAGES,
+  SECTION,
+  POSTS,
+  query,
+} from "../../data/Contentful";
 
 export async function getStaticPaths() {
   let pageResponse = await query(STATIC_PAGES, {});
