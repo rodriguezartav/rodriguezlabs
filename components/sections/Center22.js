@@ -18,7 +18,7 @@ export default function center22(props) {
         <div className="mt-10">
           <ul className="md:grid md:grid-cols-2 md:col-gap-8 md:row-gap-10">
             {props.bullets.map((item) => (
-              <li>
+              <li className="mt-7 md:mt-0 lg:mt-0 ">
                 <div className="flex">
                   <div className="flex-shrink-0">
                     <div className="flex items-center justify-center h-12 w-12 rounded-md bg-red-500 text-white">

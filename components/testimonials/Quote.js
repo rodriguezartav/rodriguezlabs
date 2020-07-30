@@ -6,7 +6,7 @@ export default function Testimonial(props) {
       <div className="relative max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative">
           <blockquote className="mt-8">
-            <div className="max-w-4xl mx-auto text-center text-6xl sm:text-2xl md:text-3xl  leading-20 font-medium text-gray-900">
+            <div className="max-w-4xl mx-auto text-center lg:text-6xl text-2xl md:text-3xl  leading-20 font-medium text-gray-900">
               <p style={{ textTransform: "uppercase" }}>{props.title}</p>
             </div>
             <footer className="mt-8">
