@@ -3,7 +3,7 @@ import React from "react";
 export default function Brand(props) {
   return (
     <div className="bg-red-700">
-      <div className="max-w-screen-xl mx-auto py-12 px-4 sm:py-16 sm:px-6 lg:px-8 lg:py-16">
+      <div className="max-w-screen-xl sm:mb-8 mx-auto py-12 px-4 sm:py-16 sm:px-6 lg:px-8 lg:py-16">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl leading-9 font-extrabold text-white sm:text-4xl sm:leading-10">
             {props.title}
