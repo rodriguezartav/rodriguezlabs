@@ -19,7 +19,7 @@ export default function Brand(props) {
           >
             {props.bullets.map((item) => {
               return (
-                <div className="flex flex-col">
+                <div className="flex flex-col mb-10 md:mb-0 lg:mb-0">
                   <dt className=" uppercase order-2 mt-2 text-lg leading-6 font-medium text-red-200">
                     {item.text}
                   </dt>
