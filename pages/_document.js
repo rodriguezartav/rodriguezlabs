@@ -11,6 +11,25 @@ export default class MyDocument extends Document {
           <link rel="icon" href="/favicon.ico" />
           <link rel="stylesheet" href="https://rsms.me/inter/inter.css"></link>
 
+          <script src="https://js.pusher.com/7.0/pusher.min.js"></script>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+
+// Enable pusher logging - don't include this in production
+Pusher.logToConsole = true;
+
+var pusher = new Pusher('b4cfb3e413405c7fcb5a', {
+  cluster: 'us2'
+});
+
+var channel = pusher.subscribe('my-channel');
+channel.bind('my-event', function(data) {
+  alert(JSON.stringify(data));
+});`,
+            }}
+          />
+
           <script
             async
             src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}

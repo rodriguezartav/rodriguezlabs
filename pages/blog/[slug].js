@@ -5,6 +5,7 @@ import LeftNav from "components/nav/Left";
 import Wrapper from "components/Wrapper";
 
 import Layout from "views/Layout";
+//import TwilioVideo from "../../video/Component";
 
 import { MENU, POST, POSTS, query } from "data/Contentful";
 
@@ -53,6 +54,7 @@ export default function Blog(props) {
   return (
     <Layout>
       <LeftNav posts={props.posts} menu={props.menu} />
+
       {props.post.componentsCollection.items.map((item) => {
         return <Wrapper item={item} />;
       })}

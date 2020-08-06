@@ -1,6 +1,6 @@
 import React from "react";
 import Alert from "./Alert";
-import { useGlobalState, useNotify } from "../../data/Context";
+import { useGlobalState, useNotify } from "../../data/Visitor/Context";
 
 export default function Alerts() {
   const state = useGlobalState();

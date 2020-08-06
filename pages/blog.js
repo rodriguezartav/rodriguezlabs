@@ -6,6 +6,7 @@ import Wrapper from "../components/Wrapper";
 import LeftNav from "../components/nav/Left";
 
 import Blog from "../components/grid/Cards";
+import TwilioVideo from "../video/Component";
 
 import Link from "next/link";
 import Layout from "../views/Layout";
@@ -42,6 +43,7 @@ export default function Home(props) {
   return (
     <Layout>
       <LeftNav posts={props.posts} menu={props.menu} />
+      {typeof window !== "undefined" && <TwilioVideo />}
 
       {props.page.componentsCollection.items.map((item) => {
         return <Wrapper item={item} />;

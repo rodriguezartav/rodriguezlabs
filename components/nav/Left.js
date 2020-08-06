@@ -188,6 +188,19 @@ export default function Left(props) {
           {props.menu.items.map((entry) => {
             return renderEntry(entry);
           })}
+
+          <div class="hidden md:flex items-center justify-end space-x-8 md:flex-1 lg:w-0">
+            <span class="inline-flex rounded-md shadow-sm">
+              <Link href="/meetings">
+                <a
+                  href="#"
+                  class="whitespace-no-wrap inline-flex items-center justify-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-red-600 hover:bg-red-500 focus:outline-none focus:border-red-700 focus:shadow-outline-red active:bg-red-700 transition ease-in-out duration-150"
+                >
+                  Sala de Juntas
+                </a>
+              </Link>
+            </span>
+          </div>
         </div>
       </div>
 

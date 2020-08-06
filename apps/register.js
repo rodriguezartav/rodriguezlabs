@@ -3,8 +3,12 @@ import { useRouter } from "next/router";
 
 import SlideOver from "../components/slideOver/Brand";
 
-import { useGlobalDispatch, useGlobalState, useNotify } from "../data/Context";
-import { registerVisitor } from "../data/Actions";
+import {
+  useGlobalDispatch,
+  useGlobalState,
+  useNotify,
+} from "../data/Visitor/Context";
+import { registerVisitor } from "../data/Visitor/Actions";
 
 export default function register(props) {
   const router = useRouter();

@@ -5,7 +5,7 @@ export async function query(route, body) {
     // Fetch data and remember product id
 
     const response = await fetch(
-      `https://rodriguezlabs-api.herokuapp.com/${route}`,
+      `${process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000"}/${route}`,
       {
         headers: {
           accept: "application/json",

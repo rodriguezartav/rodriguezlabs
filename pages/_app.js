@@ -2,9 +2,10 @@ import React, { useEffect } from "react";
 
 import Head from "next/head";
 
-import { Provider } from "../data/Context";
+import { Provider } from "../data/Visitor/Context";
 
-import Footer from "../components/Footer";
+import { Provider as VideoProvider } from "../data/Video/Context";
+
 import Alerts from "../components/alert/Alerts";
 
 import "../styles/index.css";
@@ -14,6 +15,7 @@ import * as gtag from "../data/Gtag";
 
 export default function MyApp(props) {
   const { Component, pageProps } = props;
+  const ref = React.useRef(null);
 
   useEffect(() => {
     const handleRouteChange = (url) => {
@@ -32,6 +34,7 @@ export default function MyApp(props) {
         <title>rodriguezlabs.co</title>
       </Head>
       <Component {...pageProps} />
+
       <Alerts />
     </Provider>
   );

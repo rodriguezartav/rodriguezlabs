@@ -11,7 +11,7 @@ import Link from "next/link";
 import Layout from "../views/Layout";
 import { Register } from "../apps/Map";
 
-import { MENU, PAGE, STATIC_PAGES, POSTS, query } from "../data/Contentful";
+import { MENU, PAGE, STATIC_PAGES, POSTS, query } from "data/Contentful";
 
 export async function getStaticProps({ params }) {
   let pageResponse = await query(PAGE, {
