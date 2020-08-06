@@ -11,13 +11,7 @@ import Link from "next/link";
 import Layout from "../views/Layout";
 import { Register } from "../apps/Map";
 
-import TwilioVideo from "../video/Component";
-
-import Rooms from "components/room/List";
-import useVideoContext from "video/hooks/useVideoContext/useVideoContext";
-
 import { MENU, PAGE, POSTS, ROOMS, query } from "../data/Contentful";
-import { VideoProvider } from "video/components/VideoProvider";
 
 export async function getStaticProps({ params }) {
   let pageResponse = await query(PAGE, {
@@ -52,10 +46,6 @@ export default function Meetings(props) {
       {props.page.componentsCollection.items.map((item) => {
         return <Wrapper item={item} />;
       })}
-
-      <div className="container mx-auto my-14">
-        <Rooms rooms={props.rooms} />
-      </div>
     </Layout>
   );
 }
