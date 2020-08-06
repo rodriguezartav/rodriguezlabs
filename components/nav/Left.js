@@ -189,6 +189,7 @@ export default function Left(props) {
             return renderEntry(entry);
           })}
 
+          {/*
           <div class="hidden md:flex items-center justify-end space-x-8 md:flex-1 lg:w-0">
             <span class="inline-flex rounded-md shadow-sm">
               <Link href="/meetings">
@@ -201,6 +202,7 @@ export default function Left(props) {
               </Link>
             </span>
           </div>
+          */}
         </div>
       </div>
 
