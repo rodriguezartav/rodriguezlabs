@@ -9,7 +9,6 @@ import Layout from "views/Layout";
 import Room from "components/room/Home";
 
 import { MENU, ROOM, ROOMS, query } from "data/Contentful";
-import { useGlobalState } from "data/Visitor/Context";
 
 //
 //
@@ -49,11 +48,8 @@ export async function getStaticProps({ params }) {
 }
 
 export default function RoomView(props) {
-  const { video } = useGlobalState();
-
   return (
     <Layout>
-      {typeof window !== undefined && <Room />}
       {/*
       <Blog
         onClick={(item) => {
