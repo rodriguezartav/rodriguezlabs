@@ -62,7 +62,7 @@ const map = {
   },
 };
 
-export default function Wrapper({ item }) {
+export default function Wrapper({ item, parent }) {
   const Component = map[item.__typename][item.type];
 
   const [visibleModules, setVisibleModules] = React.useState({});
@@ -104,6 +104,7 @@ export default function Wrapper({ item }) {
         return null;
       })}
       <Component
+        parent={parent}
         onShowModule={onShowModule}
         modules={modules}
         {...item}

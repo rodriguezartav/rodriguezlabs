@@ -277,6 +277,9 @@ export const POST = /* GraphQL */ `
         text
         tags
         preTitle
+        sys {
+          publishedAt
+        }
         image {
           url
         }

@@ -56,7 +56,7 @@ export default function Blog(props) {
       <LeftNav posts={props.posts} menu={props.menu} />
 
       {props.post.componentsCollection.items.map((item) => {
-        return <Wrapper item={item} />;
+        return <Wrapper parent={props.post} item={item} />;
       })}
 
       {/*

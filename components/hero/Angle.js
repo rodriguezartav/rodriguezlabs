@@ -1,6 +1,7 @@
 import React from "react";
 
 export default function Angle(props) {
+  debugger;
   return (
     <div className="relative bg-white overflow-hidden">
       <div className="max-w-screen-xl mx-auto">
@@ -16,11 +17,15 @@ export default function Angle(props) {
 
           <main className="mt-0 mx-auto max-w-screen-xl px-4 sm:mt-0 sm:px-6 md:mt-0 lg:mt-20 lg:px-8 xl:mt-0">
             <div className="sm:text-center lg:text-left pt-20">
+              <p className="text-gray-500">
+                {props.parent && props.parent.sys.publishedAt.split("T")[0]}
+              </p>
               <h2 className="text-4xl  tracking-tight leading-10 font-extrabold text-gray-900 sm:text-5xl sm:leading-none md:text-6xl">
                 {props.titleBlack}
                 <br />
                 <span className="text-red-600 pl-2">{props.titleColor}</span>
               </h2>
+
               <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
                 {props.text}
               </p>
