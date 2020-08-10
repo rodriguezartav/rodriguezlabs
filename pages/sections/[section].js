@@ -52,9 +52,13 @@ export async function getStaticProps({ params }) {
 export default function Home(props) {
   const router = useRouter();
 
-  console.log(props);
   return (
-    <Layout>
+    <Layout
+      title={props.section.title}
+      image={props.section.image ? props.section.image.url : null}
+      text={props.section.text}
+      slug={props.section.slug}
+    >
       <LeftNav posts={props.posts} menu={props.menu} />
 
       {props.section.componentsCollection.items.map((item) => {

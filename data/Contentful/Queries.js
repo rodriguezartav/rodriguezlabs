@@ -168,6 +168,9 @@ export const SECTION = /* GraphQL */ `
         title
         slug
         text
+        image {
+          url
+        }
         componentsCollection(limit: 20) {
           ... on SectionComponentsCollection {
             items {
@@ -240,7 +243,7 @@ export const SECTION = /* GraphQL */ `
           }
         }
 
-        pagesCollection(limit: 10) {
+        pagesCollection(limit: 3) {
           items {
             title
             slug

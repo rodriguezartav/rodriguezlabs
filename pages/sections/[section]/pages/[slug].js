@@ -62,7 +62,12 @@ export default function Home(props) {
   const router = useRouter();
 
   return (
-    <Layout>
+    <Layout
+      title={props.page.title}
+      image={props.page.image}
+      text={props.page.text}
+      slug={props.page.slug}
+    >
       <LeftNav posts={props.posts} menu={props.menu} />
       {props.page.componentsCollection.items.map((item) => {
         return <Wrapper item={item} />;

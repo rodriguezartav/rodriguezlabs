@@ -13,7 +13,10 @@ export default function MyApp(props) {
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
-          content="El centro de desarrollo de prototipos del inventor Roberto Rodríguez para la solución de los problemas humanos a través de innovaciones organizacionales y tecnológicas."
+          content={
+            props.text ||
+            "El centro de desarrollo de prototipos del inventor Roberto Rodríguez para la solución de los problemas humanos a través de innovaciones organizacionales y tecnológicas."
+          }
         />
 
         <meta
@@ -21,17 +24,30 @@ export default function MyApp(props) {
           content="minimum-scale=1, initial-scale=1, width=device-width"
         />
 
-        <meta property="og:site_name" content="RodriguezLab" key="ogsitename" />
+        <meta
+          property="og:site_name"
+          content="RodriguezLab.co"
+          key="ogsitename"
+        />
         <meta
           property="og:title"
-          content="Laboratorio de Emprendedurismo Social y Tecnológico"
+          content={
+            props.title
+              ? `RodriguezLab: ${props.title}`
+              : "Laboratorio de Emprendedurismo Social y Tecnológico"
+          }
           key="ogtitle"
         />
         <meta
           property="og:description"
-          content="El centro de desarrollo de prototipos del inventor Roberto Rodríguez para la solución de los problemas humanos a través de innovaciones organizacionales y tecnológicas."
+          content={
+            props.text ||
+            "El centro de desarrollo de prototipos del inventor Roberto Rodríguez para la solución de los problemas humanos a través de innovaciones organizacionales y tecnológicas."
+          }
           key="ogdesc"
         />
+
+        {props.image && <meta property="og:image" content={props.image} />}
       </Head>
 
       {props.children}

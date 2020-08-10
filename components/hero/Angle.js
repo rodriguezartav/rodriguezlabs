@@ -1,7 +1,6 @@
 import React from "react";
 
 export default function Angle(props) {
-  debugger;
   return (
     <div className="relative bg-white overflow-hidden">
       <div className="max-w-screen-xl mx-auto">
