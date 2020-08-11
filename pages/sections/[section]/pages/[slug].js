@@ -17,6 +17,7 @@ import {
 } from "../../../../data/Contentful";
 
 import Link from "next/link";
+import Disqus from "components/Disqus";
 //
 //
 export async function getStaticPaths() {
@@ -108,6 +109,7 @@ export default function Home(props) {
         }
       />
 */}
+      <Disqus />
     </Layout>
   );
 }

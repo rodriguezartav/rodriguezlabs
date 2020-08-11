@@ -5,6 +5,7 @@ import LeftNav from "../../components/nav/Left";
 import Wrapper from "../../components/Wrapper";
 
 import Link from "next/link";
+import Disqus from "components/Disqus";
 
 import Blog from "../../components/blog/ThreeCard";
 import Layout from "../../views/Layout";
@@ -99,6 +100,7 @@ export default function Home(props) {
         items={props.section.pagesCollection.items}
       />
 */}
+      <Disqus id={props.section.slug} url={`/sections/${props.section.slug}`} />
     </Layout>
   );
 }
